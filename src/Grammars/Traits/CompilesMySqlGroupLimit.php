@@ -33,7 +33,7 @@ trait CompilesMySqlGroupLimit
      */
     protected function compileGroupLimit(Builder $query)
     {
-        return $this->useLegacyGroupLimit($query); //force the legacy way
+        return $this->compileLegacyGroupLimit($query); //force the legacy way
         return $this->useLegacyGroupLimit($query)
             ? $this->compileLegacyGroupLimit($query)
             : $this->compileGroupLimitParent($query);
