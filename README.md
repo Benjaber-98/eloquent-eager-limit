@@ -1,16 +1,19 @@
-![CI](https://github.com/staudenmeir/eloquent-eager-limit/workflows/CI/badge.svg)
-[![Code Coverage](https://scrutinizer-ci.com/g/staudenmeir/eloquent-eager-limit/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/staudenmeir/eloquent-eager-limit/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/staudenmeir/eloquent-eager-limit/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/staudenmeir/eloquent-eager-limit/?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/staudenmeir/eloquent-eager-limit/v/stable)](https://packagist.org/packages/staudenmeir/eloquent-eager-limit)
-[![Total Downloads](https://poser.pugx.org/staudenmeir/eloquent-eager-limit/downloads)](https://packagist.org/packages/staudenmeir/eloquent-eager-limit)
-[![License](https://poser.pugx.org/staudenmeir/eloquent-eager-limit/license)](https://packagist.org/packages/staudenmeir/eloquent-eager-limit)
+# Eloquent Eager Limit
 
-## Introduction
+[![CI](https://github.com/staudenmeir/eloquent-eager-limit/actions/workflows/ci.yml/badge.svg)](https://github.com/staudenmeir/eloquent-eager-limit/actions/workflows/ci.yml)
+[![Code Coverage](https://codecov.io/gh/staudenmeir/eloquent-eager-limit/graph/badge.svg?token=J8ysbd1r80)](https://codecov.io/gh/staudenmeir/eloquent-eager-limit)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/staudenmeir/eloquent-eager-limit/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/staudenmeir/eloquent-eager-limit/?branch=main)
+[![Latest Stable Version](https://poser.pugx.org/staudenmeir/eloquent-eager-limit/v/stable)](https://packagist.org/packages/staudenmeir/eloquent-eager-limit)
+[![Total Downloads](https://poser.pugx.org/staudenmeir/eloquent-eager-limit/downloads)](https://packagist.org/packages/staudenmeir/eloquent-eager-limit/stats)
+[![License](https://poser.pugx.org/staudenmeir/eloquent-eager-limit/license)](https://github.com/staudenmeir/eloquent-eager-limit/blob/main/LICENSE)
+
+> [!IMPORTANT]
+> The package's code has been merged into Laravel 11+ and eager loading limits are now supported natively.
 
 This Laravel Eloquent extension allows limiting the number of eager loading results per parent
 using [window functions](https://en.wikipedia.org/wiki/Select_(SQL)#Limiting_result_rows).
 
-Supports Laravel 5.5.29+.
+Supports Laravel 5.5–10.
 
 ## Compatibility
 
@@ -29,6 +32,18 @@ Supports Laravel 5.5.29+.
 Use this command if you are in PowerShell on Windows (e.g. in VS Code):
 
     composer require staudenmeir/eloquent-eager-limit:"^^^^1.0"
+
+## Versions
+
+| Laravel | Package |
+|:--------|:--------|
+| 10.x    | 1.8     |
+| 9.x     | 1.7     |
+| 8.x     | 1.6     |
+| 7.x     | 1.5     |
+| 6.x     | 1.4     |
+| 5.8     | 1.3     |
+| 5.5–5.7 | 1.2     |
 
 ## Usage
 

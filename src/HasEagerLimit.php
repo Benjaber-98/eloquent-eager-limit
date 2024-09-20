@@ -42,17 +42,18 @@ trait HasEagerLimit
     {
         $driver = $connection->getDriverName();
 
-        switch ($driver) {
-            case 'mysql':
-                return new MySqlGrammar();
-            case 'pgsql':
-                return new PostgresGrammar();
-            case 'sqlite':
-                return new SQLiteGrammar();
-            case 'sqlsrv':
-                return new SqlServerGrammar();
+        $grammar = match ($driver) {
+            'mysql', 'mariadb' => new MySqlGrammar(),
+            'pgsql' => new PostgresGrammar(),
+            'sqlite' => new SQLiteGrammar(),
+            'sqlsrv' => new SqlServerGrammar(),
+            default => throw new RuntimeException('This database is not supported.'), // @codeCoverageIgnore
+        };
+
+        if (method_exists($grammar, 'setConnection')) {
+            $grammar->setConnection($connection);
         }
 
-        throw new RuntimeException('This database is not supported.'); // @codeCoverageIgnore
+        return $grammar;
     }
 }
